@@ -2,6 +2,8 @@
 
 与 **PLAN.md §7** 一致：分两步，**不**合并为单一不可拆安装包。
 
+克隆本开发仓库时需拉取子模块，见 [CLONE.md](./CLONE.md)。
+
 ## 1. OpenSpec CLI 与仓库初始化
 
 1. 在开发环境中全局安装 **OpenSpec CLI**（参见 [OpenSpec 上游](https://github.com/Fission-AI/OpenSpec) 的安装说明）。
@@ -61,7 +63,7 @@ npm publish --access public
 
 ```json
 {
-  "plugin": ["oh-my-research@git+https://github.com/OWNER/oh-my-research.git"]
+  "plugin": ["oh-my-research@git+https://github.com/MerrillLi/oh-my-research.git"]
 }
 ```
 
