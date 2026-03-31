@@ -5,7 +5,7 @@
 当前 npm 账户若开启 **双因素认证（2FA）**，在终端执行 `npm publish` 时需要 **一次性验证码**，无法由他人代操作。
 
 ```bash
-cd /path/to/oh-my-research
+cd /path/to/openspec-superpowers
 npm whoami    # 确认已登录
 npm publish --access public
 ```
@@ -13,7 +13,7 @@ npm publish --access public
 若提示需要 token：在 [npm Access Tokens](https://www.npmjs.com/settings/~/tokens) 创建 **Granular Access Token**，勾选 **Publish packages**，并在本机配置 `~/.npmrc` 或使用 `npm login`（支持 2FA 时按提示输入 OTP）。
 
 发布成功后可在网页确认：  
-https://www.npmjs.com/package/oh-my-research
+https://www.npmjs.com/package/openspec-superpowers
 
 ## 在 OpenCode 里启用插件
 
@@ -22,7 +22,7 @@ https://www.npmjs.com/package/oh-my-research
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["oh-my-research"]
+  "plugin": ["openspec-superpowers"]
 }
 ```
 
@@ -30,9 +30,9 @@ https://www.npmjs.com/package/oh-my-research
 
 ## 如何确认「能看到」插件
 
-1. **技能列表**：在对话里让助手用内置 **skill** 工具列出技能，应出现 `openspec-explore`、`using-oh-my-research` 等（名称以实际解析为准）。
-2. **系统提示**：插件通过 `experimental.chat.system.transform` 注入了 **using-oh-my-research** 的引导；新开会话后模型应能概括本插件与 OpenSpec 的协作方式。
-3. **日志**（可选）：终端运行 `opencode` 时加 `--print-logs` 或查看 OpenCode 日志里是否加载 `oh-my-research`。
+1. **技能列表**：在对话里让助手用内置 **skill** 工具列出技能，应出现 `openspec-explore`、`using-openspec-superpowers` 等（名称以实际解析为准）。
+2. **系统提示**：插件通过 `experimental.chat.system.transform` 注入了 **using-openspec-superpowers** 的引导；新开会话后模型应能概括本插件与 OpenSpec 的协作方式。
+3. **日志**（可选）：终端运行 `opencode` 时加 `--print-logs` 或查看 OpenCode 日志里是否加载 `openspec-superpowers`。
 
 ## 版本升级
 
