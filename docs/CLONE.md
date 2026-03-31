@@ -10,7 +10,7 @@
 首次克隆请带上子模块：
 
 ```bash
-git clone --recurse-submodules https://github.com/MerrillLi/oh-my-research.git
+git clone --recurse-submodules https://github.com/MerrillLi/openspec-superpowers.git
 ```
 
 若已克隆但未拉取子模块：

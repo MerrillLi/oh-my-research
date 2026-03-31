@@ -1,5 +1,5 @@
 /**
- * oh-my-research — OpenSpec OPSX + Superpowers-adapted skills for OpenCode.
+ * openspec-superpowers — OpenSpec OPSX + Superpowers-adapted skills for OpenCode.
  *
  * npm 入口：与 `package.json` 的 `main` 对齐；`skills/` 与本文件同处包根目录。
  * 本地 `.opencode/plugins/` 下的文件仅 re-export 本模块，便于 file:// 与目录插件两种装法。
@@ -32,11 +32,11 @@ const extractAndStripFrontmatter = (content) => {
   return { frontmatter, content: body };
 };
 
-const OhMyResearchPlugin = async () => {
+const OpenSpecSuperpowersPlugin = async () => {
   const pluginSkillsDir = path.resolve(__dirname, 'skills');
 
   const getBootstrapContent = () => {
-    const skillPath = path.join(pluginSkillsDir, 'using-oh-my-research', 'SKILL.md');
+    const skillPath = path.join(pluginSkillsDir, 'using-openspec-superpowers', 'SKILL.md');
     if (!fs.existsSync(skillPath)) return null;
 
     const fullContent = fs.readFileSync(skillPath, 'utf8');
@@ -76,5 +76,5 @@ ${toolMapping}
   };
 };
 
-export { OhMyResearchPlugin };
-export default OhMyResearchPlugin;
+export { OpenSpecSuperpowersPlugin };
+export default OpenSpecSuperpowersPlugin;

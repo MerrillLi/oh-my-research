@@ -1,4 +1,4 @@
-# 安装 oh-my-research（OpenCode 插件）
+# 安装 openspec-superpowers（OpenCode 插件）
 
 与 **PLAN.md §7** 一致：分两步，**不**合并为单一不可拆安装包。
 
@@ -21,33 +21,31 @@ openspec init
 
 ### 方式 A：从 npm 安装（推荐，启动自动装载）
 
-1. 在仓库根目录已提供 **`package.json`**，包名默认为 **`oh-my-research`**（若与 npm 上已有包重名，请改成 **`@你的作用域/oh-my-research`** 等唯一名称）。
-2. 登录并发布（首次需 [注册 npm 账号](https://www.npmjs.com/signup)）。若账号开启 **2FA**，需在终端 **`npm publish`** 时输入一次性验证码，或改用 **Granular Access Token**（见 [NPM.md](./NPM.md) ）。
+1. 在仓库根目录已提供 **`package.json`**，包名默认为 **`openspec-superpowers`**（若与 npm 上已有包重名，请改成 **`@你的作用域/openspec-superpowers`** 等唯一名称）。
+2. 登录并发布（首次需 [注册 npm 账号](https://www.npmjs.com/signup)）：
 
 ```bash
-cd /path/to/oh-my-research
+cd /path/to/openspec-superpowers
 npm login
 npm publish --access public
 ```
 
-若使用 **作用域包**（如 `@username/oh-my-research`），在 `package.json` 里把 `name` 改为作用域形式，并确保含 `"publishConfig": { "access": "public" }`。
+若使用 **作用域包**（如 `@username/openspec-superpowers`），在 `package.json` 里把 `name` 改为作用域形式，并确保含 `"publishConfig": { "access": "public" }`。
 
 3. 在 `opencode.json` 中写 **包名**（与 `package.json` 的 `name` 一致）：
 
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": ["oh-my-research"]
+  "plugin": ["openspec-superpowers"]
 }
 ```
 
-作用域包示例：`"plugin": ["@username/oh-my-research"]`。
+作用域包示例：`"plugin": ["@username/openspec-superpowers"]`。
 
 4. 重启 OpenCode。之后每次启动都会按该版本解析并加载插件（与社区插件如 `opencode-helicone-session` 相同机制）。
 
-5. 在 OpenCode 中验证是否加载成功：见 **[NPM.md](./NPM.md)**。
-
-**本地试打包（不发布）：** `npm pack` 会生成 `oh-my-research-0.1.0.tgz`，可用于检查打进包里的只有 `index.js` 与 `skills/`。
+**本地试打包（不发布）：** `npm pack` 会生成 `openspec-superpowers-0.1.0.tgz`，可用于检查打进包里的只有 `index.js` 与 `skills/`。
 
 ### 方式 B：本地路径（开发调试）
 
@@ -55,7 +53,7 @@ npm publish --access public
 
 ```json
 {
-  "plugin": ["file:///Users/you/oh-my-research"]
+  "plugin": ["file:///Users/you/openspec-superpowers"]
 }
 ```
 
@@ -65,11 +63,11 @@ npm publish --access public
 
 ```json
 {
-  "plugin": ["oh-my-research@git+https://github.com/MerrillLi/oh-my-research.git"]
+  "plugin": ["openspec-superpowers@git+https://github.com/MerrillLi/openspec-superpowers.git"]
 }
 ```
 
-重启后插件会注册 **`skills/`** 并注入 **using-oh-my-research** 引导。
+重启后插件会注册 **`skills/`** 并注入 **using-openspec-superpowers** 引导。
 
 **验证：** 使用 skill 工具列出技能，应能看到 `openspec-explore`、`openspec-propose`、`openspec-verify-change` 等。
 

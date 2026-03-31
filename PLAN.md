@@ -197,7 +197,7 @@
 - [x] 编写 **安装文档**：按 §7 **两步**，OpenSpec CLI + **`openspec init`**，再安装本插件与甄选 Skills；并在此后 **补充 OpenSpec / 插件的兼容版本表**（见 `docs/INSTALL.md`、`docs/COMPATIBILITY.md`）
 - [x] 按 §5 列出插件内 **实际包含的 SKILL 文件** 及相对 `3rdparty/superpowers` 的删减说明（见 `docs/SKILLS.md`）
 - [x] 编写 **主 Agent 编排契约**：协调不执行、§4 角色、无子代理 API 时顺序内联降级（见 `docs/AGENT_ORCHESTRATION.md`）
-- [x] **Scaffold OpenCode 插件**：OpenCode 插件入口、skills 目录、与 `openspec` CLI 的协作说明（见 `.opencode/plugins/oh-my-research.js`、`docs/INSTALL.md`；**OpenCode 使用 JS 插件而非 Codex `plugin.json`**，与上游 Superpowers 对齐）
+- [x] **Scaffold OpenCode 插件**：OpenCode 插件入口、skills 目录、与 `openspec` CLI 的协作说明（见 `.opencode/plugins/openspec-superpowers.js`、`docs/INSTALL.md`；**OpenCode 使用 JS 插件而非 Codex `plugin.json`**，与上游 Superpowers 对齐）
 - [x] 一页文档：何时 **explore** 与 **apply**，何时派发子代理（见 `docs/EXPLORE_VS_APPLY.md`）
 
 ---

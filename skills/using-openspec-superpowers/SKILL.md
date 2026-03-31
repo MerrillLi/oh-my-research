@@ -1,9 +1,9 @@
 ---
-name: using-oh-my-research
+name: using-openspec-superpowers
 description: Read first — how this plugin combines OpenSpec OPSX with adapted engineering skills; use when orienting or choosing workflows.
 ---
 
-# Using oh-my-research (OpenSpec + engineering skills)
+# Using openspec-superpowers (OpenSpec + engineering skills)
 
 This plugin is **not** a second copy of upstream Superpowers or OpenSpec. It **orchestrates**:
 
