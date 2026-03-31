@@ -22,7 +22,7 @@ openspec init
 ### 方式 A：从 npm 安装（推荐，启动自动装载）
 
 1. 在仓库根目录已提供 **`package.json`**，包名默认为 **`oh-my-research`**（若与 npm 上已有包重名，请改成 **`@你的作用域/oh-my-research`** 等唯一名称）。
-2. 登录并发布（首次需 [注册 npm 账号](https://www.npmjs.com/signup)）：
+2. 登录并发布（首次需 [注册 npm 账号](https://www.npmjs.com/signup)）。若账号开启 **2FA**，需在终端 **`npm publish`** 时输入一次性验证码，或改用 **Granular Access Token**（见 [NPM.md](./NPM.md) ）。
 
 ```bash
 cd /path/to/oh-my-research
@@ -44,6 +44,8 @@ npm publish --access public
 作用域包示例：`"plugin": ["@username/oh-my-research"]`。
 
 4. 重启 OpenCode。之后每次启动都会按该版本解析并加载插件（与社区插件如 `opencode-helicone-session` 相同机制）。
+
+5. 在 OpenCode 中验证是否加载成功：见 **[NPM.md](./NPM.md)**。
 
 **本地试打包（不发布）：** `npm pack` 会生成 `oh-my-research-0.1.0.tgz`，可用于检查打进包里的只有 `index.js` 与 `skills/`。
 
