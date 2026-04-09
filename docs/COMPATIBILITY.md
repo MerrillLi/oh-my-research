@@ -1,10 +1,10 @@
 # 兼容性与版本冻结（Scaffold）
 
-本仓库在 **§8 TODO** 中承诺依据 **实际锁定版本** 记录兼容性；当前以 vendored 上游为参照。
+本仓库在 **§8 TODO** 中承诺依据 **实际锁定版本** 记录兼容性；当前以根包真实依赖为准。
 
 | 组件 | 参照版本 / 来源 |
 |------|------------------|
-| OpenSpec CLI | `3rdparty/openspec/package.json` — **1.2.0**（随上游更新时请改此表） |
+| OpenSpec CLI | 根 `package.json` 依赖 `@fission-ai/openspec` — **^1.2.0** |
 | Superpowers | `3rdparty/superpowers` — 仅作改编来源，无运行时版本绑定 |
 | OpenCode | 插件 API 与 `3rdparty/superpowers/.opencode/plugins/superpowers.js` 同模式 |
 

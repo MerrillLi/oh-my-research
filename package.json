@@ -14,8 +14,7 @@
   "files": [
     "index.js",
     "skills",
-    "bin",
-    "3rdparty"
+    "bin"
   ],
   "keywords": [
     "opencode",
@@ -32,23 +31,12 @@
     "node": ">=18"
   },
   "scripts": {
-    "test": "jest"
+    "test": "node --test tests/**/*.test.mjs"
   },
   "bin": {
     "openspec": "./bin/openspec.js"
   },
-  "devDependencies": {
-    "jest": "^29.0.0"
-  },
   "dependencies": {
-    "@inquirer/core": "^10.2.2",
-    "@inquirer/prompts": "^7.8.0",
-    "chalk": "^5.5.0",
-    "commander": "^14.0.0",
-    "fast-glob": "^3.3.3",
-    "ora": "^8.2.0",
-    "posthog-node": "^5.20.0",
-    "yaml": "^2.8.2",
-    "zod": "^4.0.17"
+    "@fission-ai/openspec": "^1.2.0"
   }
 }

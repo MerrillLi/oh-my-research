@@ -1,20 +1,14 @@
 # 克隆本仓库
 
-`3rdparty/openspec` 与 `3rdparty/superpowers` 为 **Git 子模块**，指向公开上游：
+本仓库可以直接普通克隆，不需要额外初始化子模块：
 
-| 路径 | 上游 |
+```bash
+git clone https://github.com/MerrillLi/openspec-superpowers.git
+```
+
+仓库中保留了上游参考源码目录，便于对照与同步：
+
+| 路径 | 用途 |
 |------|------|
-| `3rdparty/openspec` | [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) |
-| `3rdparty/superpowers` | [obra/superpowers](https://github.com/obra/superpowers) |
-
-首次克隆请带上子模块：
-
-```bash
-git clone --recurse-submodules https://github.com/MerrillLi/openspec-superpowers.git
-```
-
-若已克隆但未拉取子模块：
-
-```bash
-git submodule update --init --recursive
-```
+| `3rdparty/openspec` | OpenSpec 参考源码快照 |
+| `3rdparty/superpowers` | Superpowers 参考源码快照 |

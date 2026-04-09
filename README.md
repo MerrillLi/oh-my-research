@@ -5,7 +5,7 @@
 
 ## 安装（只用 Git 仓库）
 
-你可以直接通过 npm 从 GitHub 仓库全局安装魔改版本的 openspec（会自动编译并链接 `openspec` 命令）：
+你可以直接通过 npm 从 GitHub 仓库全局安装本包；安装时会拉取正式发布的 `@fission-ai/openspec` 作为 CLI 运行时，并暴露 `openspec` 命令：
 
 ```bash
 npm install -g https://github.com/MerrillLi/openspec-superpowers.git
@@ -53,7 +53,7 @@ openspec update
 - `index.js`：OpenCode 插件入口
 - `.opencode/plugins/`：插件加载文件
 - `skills/`：自带技能定义（已包含 `using-openspec-superpowers`）
-- `3rdparty/openspec/`：定制化 OpenSpec 分发代码与文档
+- `3rdparty/openspec/`：上游 OpenSpec 参考源码快照，不参与运行时分发
 - `docs/`：安装与技能说明
 
 ## 常用检查

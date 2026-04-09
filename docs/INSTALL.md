@@ -2,7 +2,7 @@
 
 与 **PLAN.md §7** 一致：分两步，**不**合并为单一不可拆安装包。
 
-克隆本开发仓库时需拉取子模块，见 [CLONE.md](./CLONE.md)。
+运行时 CLI 由 npm 依赖 `@fission-ai/openspec` 提供；仓库中的 `3rdparty/openspec` 仅作参考源码快照。
 
 ## 1. OpenSpec CLI 与仓库初始化
 
@@ -45,7 +45,7 @@ npm publish --access public
 
 4. 重启 OpenCode。之后每次启动都会按该版本解析并加载插件（与社区插件如 `opencode-helicone-session` 相同机制）。
 
-**本地试打包（不发布）：** `npm pack` 会生成 `openspec-superpowers-0.1.0.tgz`，可用于检查打进包里的只有 `index.js` 与 `skills/`。
+**本地试打包（不发布）：** `npm pack` 会生成 `openspec-superpowers-0.1.0.tgz`，可用于检查打进包里的只有插件入口、`skills/` 与 `bin/openspec.js` 这层薄包装；真正的 CLI 代码来自依赖 `@fission-ai/openspec`。
 
 ### 方式 B：本地路径（开发调试）
 
@@ -59,7 +59,7 @@ npm publish --access public
 
 此时 OpenCode 会把该目录当作包，读取根目录 **`package.json` 的 `main`**（即 `./index.js`），与 npm 安装行为一致。
 
-### 方式 C：Git 远程（不经过 npm）
+### 方式 C：Git 远程
 
 ```json
 {
